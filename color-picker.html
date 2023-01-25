@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Picker</title>
+        <style>
+            #gradient {
+                background-image: linear-gradient(red,yellow);
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Color Picker</h1>
+        <div id="gradient" onclick="showLocation(event)"></div>
+        <div id="coordinates"></div>
+        <script>
+            function showLocation(event) {
+                let x = event.offsetX;
+                let y = event.offsetY;
+                document.getElementById('coordinates').innerHTML = "("+x+","+y+")";
+            }
+        </script>
+    </body>
+</html>
