@@ -8,12 +8,24 @@
                 width: 200px;
                 height: 200px;
             }
+            #color,
+            #mouse-color {
+                width: 100px;
+                height: 100px;
+            }
+            #color-choosers {
+                display: flex;
+            }
         </style>
     </head>
     <body>
         <h1>Color Picker</h1>
-        <div id="gradient" onclick="showLocation(event)"></div>
-        <div id="coordinates"></div>
+        <div id="gradient" onclick="chooseColor(event, 'color')" onmousemove="chooseColor(event, 'mouse-color')"></div>
+        <div id="color-choosers">
+            <div id="mouse-color"></div>
+            <div id="color"></div>
+        </div>
+        
         <script src="color-picker.js"></script>
     </body>
 </html>
